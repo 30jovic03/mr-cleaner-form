@@ -1,7 +1,7 @@
 import Collapse from 'react-bootstrap/Collapse';
 import React from 'react';
 import './App.css';
-import { Container, Form, Row, Col, Button } from 'react-bootstrap';
+import { Container, Form, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faChair, faCity, faCouch, faHandSparkles, faHome, faHospital, faInfoCircle, faStoreAlt, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
@@ -158,15 +158,15 @@ class App extends React.Component {
     if (event.target.parentElement.parentElement.id) id = event.target.parentElement.parentElement.id;
     
     let propName;
-    // if (stateRef === 'cleaningDetails') propName = 'property';
-    // if (stateRef === 'generalCleaning' || stateRef === 'windowCleaning' || stateRef === 'carpetCleaning' || stateRef === 'upholsteryCleaning') propName = 'pollutionDegree';
-    switch (stateRef) {
-      case 'cleaningDetails': propName = 'property'; break;
-      case 'generalCleaning': propName = 'pollutionDegree'; break;
-      case 'windowCleaning': propName = 'pollutionDegree'; break;
-      case 'carpetCleaning': propName = 'pollutionDegree'; break;
-      case 'upholsteryCleaning': propName = 'pollutionDegree'; break;
-    }
+    if (stateRef === 'cleaningDetails') propName = 'property';
+    if (stateRef === 'generalCleaning' || stateRef === 'windowCleaning' || stateRef === 'carpetCleaning' || stateRef === 'upholsteryCleaning') propName = 'pollutionDegree';
+    // switch (stateRef) {
+    //   case 'cleaningDetails': propName = 'property'; break;
+    //   case 'generalCleaning': propName = 'pollutionDegree'; break;
+    //   case 'windowCleaning': propName = 'pollutionDegree'; break;
+    //   case 'carpetCleaning': propName = 'pollutionDegree'; break;
+    //   case 'upholsteryCleaning': propName = 'pollutionDegree'; break;
+    // }
 
     const newData = Object.assign(this.state[stateRef], {
       [propName]: id,
@@ -561,7 +561,7 @@ class App extends React.Component {
                       </Row>
                       <Collapse in={ this.state.mainCheckboxes.check_2_i }>
                         <div id="windowCleaningPicture">
-                          <img src='mrc_info_windows.png' />
+                          <img src='mrc_info_windows.png' alt="windows" />
                         </div>
                       </Collapse>
                       <Row className="form-item">
@@ -893,7 +893,7 @@ class App extends React.Component {
                   </h5>
                   <div className="privacyPolicy">
                     <Form.Check type="checkbox" /><p>
-                    I agree that my data will be used to process my request and I hereby agree to the <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank">terms</a> and <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank">conditions</a> and the <a href="https://www.mrcleaner.at/nuetzliches/datenschutz.html" target="_blank">privacy policy</a>.</p></div>
+                    I agree that my data will be used to process my request and I hereby agree to the <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank" rel="noreferrer">terms</a> and <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank" rel="noreferrer">conditions</a> and the <a href="https://www.mrcleaner.at/nuetzliches/datenschutz.html" target="_blank" rel="noreferrer">privacy policy</a>.</p></div>
                   <button className="submit"
                     onClick={ () => console.log(this.state) } >
                     Log Form Data to the console
