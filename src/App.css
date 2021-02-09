@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 70px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body {
+  width: 94vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  margin-left: 70px;
+  padding-top: 20px;
+}
+h6 {
+  padding-top: 15px;
+}
+.form-col {
+  background-color: #f4f4f4;
+  padding: 15px;
+  box-shadow: 2px 2px 10px 0 rgb(0 0 0 / 10%);
+  margin-bottom: 30px;
+}
+span {
+  color: #108f36;
+}
+.form-item {
+  padding-bottom: 10px;
+  align-items: center;
+}
+.main-checkbox {
+  padding: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.property-grid {
+  padding: 10px 0 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.pollution-grid {
+  padding: 10px 0 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.grid-item {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+.wrap-item {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.wrap-item:hover {
+  cursor: pointer;
+}
+.wrap-item svg {
+  font-size: 30px;
+  color: #108f36;
+}
+.active {
+  transform: translateY(-5px);
+  background-color: #108f36;
+  color: #fff;
+}
+.active svg {
+  color: #fff;
+}
+#window-cleaning > p {
+  font-size: 12px;
+}
+#windowCleaningPicture {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+}
+.handle-counter {
+  display: flex;
+}
+.handle-counter input {
+  text-align: center;
+}
+.counter {
+  border: 2px solid #108f36;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  color: #108f36;
+  padding: 0px 12px;
+  font-size: 16px;
+  font-weight: 800;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+.checkbox-grid .form-check .form-check-label {
+  height: 20px;
+  width: 80px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.upholstery-item {
+  padding: 15px 0;
+}
+.upholstery-label svg {
+  font-size: 25px;
+  color: #555;
+}
+.boxUploadedFiles {
+  margin: 30px 0;
+  border: 1px dashed #555;
+  height: 110px;
+  padding: 10px;
+}
+.uploadButton {
+  border: 2px dashed #999;
+  height: 86px;
+  width: 86px;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+.uploadButton:hover {
+  cursor: pointer;
+}
+.redeem {
+  width: 27%;
+  background-color: #108f36;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+}
+.privacyPolicy {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.privacyPolicy a {
+  color: #108f36;
+}
+.privacyPolicy a:hover {
+  color: #108f36;
+  text-decoration: none;
+}
+.submit {
+  margin-top: 50px;
+  width: 100%;
+  height: 60px;
+  background-color: #ea912d;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
   }
 }
