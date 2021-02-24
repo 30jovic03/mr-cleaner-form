@@ -222,6 +222,11 @@ class App extends React.Component {
     }));
   }
 
+  submitForm(e) {
+    e.preventDefault();
+    console.log(this.state);
+  }
+
   render() {
     return (
       <div>
@@ -863,7 +868,7 @@ class App extends React.Component {
                     <span>3</span> Appointment & time
                   </h5>
                   <div>
-                    <h5 className="text-success">Calendar</h5>
+                    <h5 className="text-success">Calendar is going to be added here</h5>
                   </div>
                 </div>
                 <div  className="form-col">
@@ -871,7 +876,7 @@ class App extends React.Component {
                     <span>4</span> Add pictures
                   </h5>
                   <div className="boxUploadedFiles">
-                    <button className="uploadButton" onClick="">+</button>
+                    <button className="uploadButton">+</button>
                   </div>
                 </div>
                 <div  className="form-col">
@@ -882,7 +887,7 @@ class App extends React.Component {
                   <h6>Enter code</h6>
                     <div style={{display: "flex", flexDirection: "row"}}>
                       <Form.Control type="text" style={{width: "73%"}} id="couponCode" placeholder="Coupon code" />
-                      <button className="redeem" >
+                      <button className="redeem">
                         Redeem
                       </button>
                   </div>
@@ -895,7 +900,7 @@ class App extends React.Component {
                     <Form.Check type="checkbox" /><p>
                     I agree that my data will be used to process my request and I hereby agree to the <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank" rel="noreferrer">terms</a> and <a href="https://www.mrcleaner.at/nuetzliches/agb.html" target="_blank" rel="noreferrer">conditions</a> and the <a href="https://www.mrcleaner.at/nuetzliches/datenschutz.html" target="_blank" rel="noreferrer">privacy policy</a>.</p></div>
                   <button className="submit"
-                    onClick={ () => console.log(this.state) } >
+                    onClick={ e => this.submitForm(e) } >
                     Log Form Data to the console
                   </button>
                 </div>
